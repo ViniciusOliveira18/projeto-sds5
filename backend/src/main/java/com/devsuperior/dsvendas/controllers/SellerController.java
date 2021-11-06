@@ -1,4 +1,4 @@
-package com.devsuperior.dsvendas.controller;
+package com.devsuperior.dsvendas.controllers;
 
 import java.util.List;
 
@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.devsuperior.dsvendas.dto.SellerDTO;
-import com.devsuperior.dsvendas.service.SellerServicer;
+import com.devsuperior.dsvendas.service.SellerService;
 
 @RestController
 @RequestMapping(value = "/sellers")
 public class SellerController {
 	
 	@Autowired
-	private SellerServicer service;
+	private SellerService service;
 
 	@GetMapping
 	public ResponseEntity<List<SellerDTO>> findAll(){
